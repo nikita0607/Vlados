@@ -17,8 +17,8 @@ ORANGE = (255, 150, 100)
 # Персонаж
 player_speed = 1
 hero = pygame.Rect(x, y, 60, 50)
-x = WIDTH // 2
-y = HEIGHT // 2
+player_x = WIDTH // 2
+player_y = HEIGHT // 2
 
 pygame.init()
 clock = pygame.time.Clock()
@@ -28,11 +28,13 @@ screen.fill(WHITE)
 
 
 def draw_screen():
+
+
     pygame.display.update()
 
 running = True
 while running:
-    moving = ""
+    moving = 0
 
     events = pygame.event.get()
     for i in events:
@@ -40,13 +42,16 @@ while running:
             running = False
         if i.type == pygame.KEYDOWN:
             if i.key == pygame.K_LEFT:
-                moving = 'LEFT'
+                moving = -1
             if i.key == pygame.K_RIGHT:
-                moving = 'RIGHT'
+                moving = 1
             if i.key == pygame.K_UP:
-                moving = 'UP'
+                moving = -2
             if i.key == pygame.K_DOWN:
-                moving = 'DOWN'
+                moving = 2
+
+    player_x += moving%2 * player_speed
+    player_y += moving//2 * player_speed
     
     draw_screen()
     clock.tick(FPS)
