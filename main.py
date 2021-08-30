@@ -1,11 +1,9 @@
-import pygame 
+import pygame
 import random 
 
 FPS = 60
 WIDTH = 500
 HEIGHT = 100
-
-
 
 #Настройка цвета
 BLACK = (0,0,0)
@@ -16,7 +14,6 @@ ORANGE = (255, 150, 100)
 
 # Персонаж
 player_speed = 1
-hero = pygame.Rect(player_x, player_y, 60, 50)
 heroImg = pygame.image.load('chief.png')
 player_x = WIDTH // 2
 player_y = HEIGHT // 2
@@ -29,7 +26,9 @@ screen.fill(WHITE)
 
 
 def draw_screen():
-
+    screen.fill(WHITE)
+    
+    screen.blit(heroImg, (player_x, player_y))
 
     pygame.display.update()
 
@@ -58,6 +57,7 @@ while running:
     screen.fill(WHITE)
     draw_screen()
     clock.tick(FPS)
+
 pygame.quit()
 
 
