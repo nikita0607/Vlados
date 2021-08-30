@@ -51,6 +51,7 @@ while running:
     if keys[pygame.K_DOWN]:
         moving = 2
 
+    print(moving%2, moving//2)
     player_x += moving%2 * player_speed
     player_y += moving//2 * player_speed
     
