@@ -53,7 +53,6 @@ while running:
     player_x += moving%2 * player_speed
     player_y += moving//2 * player_speed
     
-    screen.blit(heroImg, (hero.left, hero.top))
     screen.fill(WHITE)
     draw_screen()
     clock.tick(FPS)
