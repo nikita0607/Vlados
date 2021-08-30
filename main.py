@@ -40,15 +40,16 @@ while running:
     for i in events:
         if i.type == pygame.QUIT:
             running = False
-        if i.type == pygame.KEYDOWN:
-            if i.key == pygame.K_LEFT:
-                moving = -1
-            if i.key == pygame.K_RIGHT:
-                moving = 1
-            if i.key == pygame.K_UP:
-                moving = -2
-            if i.key == pygame.K_DOWN:
-                moving = 2
+
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_LEFT]:
+        moving = -1
+    if keys[pygame.K_RIGHT]:
+        moving = 1
+    if keys[pygame.K_UP]:
+        moving = -2
+    if keys[pygame.K_DOWN]:
+        moving = 2
 
     player_x += moving%2 * player_speed
     player_y += moving//2 * player_speed
