@@ -92,7 +92,7 @@ while running:
     elif moving_x and not moving_y:
         player_y_moving = 0 
 
-    if keys[pygame.E] and player_hand is None:
+    if keys[pygame.K_e] and player_hand is None:
 
         for game_object in game_objects:
             if player_see_on(game_objects):
