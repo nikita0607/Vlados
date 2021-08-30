@@ -5,6 +5,8 @@ FPS = 60
 WIDTH = 500
 HEIGHT = 100
 
+
+
 #Настройка цвета
 BLACK = (0,0,0)
 WHITE = (255,255,255)
@@ -14,6 +16,7 @@ ORANGE = (255, 150, 100)
 
 # Персонаж
 player_speed = 1
+hero = pygame.Rect(x, y, 60, 50)
 
 
 pygame.init()
