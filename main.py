@@ -17,7 +17,8 @@ ORANGE = (255, 150, 100)
 # Персонаж
 player_speed = 1
 hero = pygame.Rect(x, y, 60, 50)
-
+x = WIDTH // 2
+y = HEIGHT // 2
 
 pygame.init()
 clock = pygame.time.Clock()
