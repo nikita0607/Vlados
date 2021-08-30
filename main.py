@@ -43,17 +43,18 @@ while running:
 
     keys = pygame.key.get_pressed()
     if keys[pygame.K_LEFT]:
-        moving = -2
+        moving = -1
     if keys[pygame.K_RIGHT]:
-        moving = 2
+        moving = 1
     if keys[pygame.K_UP]:
-        moving = -3
+        moving = -2
     if keys[pygame.K_DOWN]:
-        moving = 3
+        moving = 2
 
-    print(moving, moving%3, moving//3)
-    player_x += moving%3/2 * player_speed
-    player_y += moving//3 * player_speed
+    print(moving, (moving - moving//2), moving//2)
+    if moving:
+        player_x += (moving - moving//2) * player_speed
+        player_y += moving//2 * player_speed
     
     screen.fill(WHITE)
     draw_screen()
