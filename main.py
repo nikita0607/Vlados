@@ -55,6 +55,7 @@ while running:
     player_y += moving//2 * player_speed
     
     screen.blit(heroImg, (hero.left, hero.top))
+    screen.fill(WHITE)
     draw_screen()
     clock.tick(FPS)
 pygame.quit()
