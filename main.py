@@ -31,9 +31,48 @@ while running:
             if i.key == pygame.K_UP:
                 moving = 'UP'
             if i.key == pygame.K_DOWN:
-                moving = 'DOWN'
-
-
+                moving = 'DOWN'    
+        
+    
     pygame.display.update()
     clock.tick(FPS)
 pygame.quit()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
