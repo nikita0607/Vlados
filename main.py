@@ -17,6 +17,7 @@ ORANGE = (255, 150, 100)
 # Персонаж
 player_speed = 1
 hero = pygame.Rect(player_x, player_y, 60, 50)
+heroImg = pygame.image.load('chief.png')
 player_x = WIDTH // 2
 player_y = HEIGHT // 2
 
@@ -53,6 +54,7 @@ while running:
     player_x += moving%2 * player_speed
     player_y += moving//2 * player_speed
     
+    screen.blit(heroImg, (hero.left, hero.top))
     draw_screen()
     clock.tick(FPS)
 pygame.quit()
