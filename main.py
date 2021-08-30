@@ -19,6 +19,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 screen.fill(WHITE)
 running = True
 while running:
+    moving = ""
     events = pygame.event.get()
     for i in events:
         if i.type == pygame.QUIT:
