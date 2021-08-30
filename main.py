@@ -51,10 +51,11 @@ while running:
     if keys[pygame.K_DOWN]:
         moving = 2
 
-    print(moving, (moving - moving//2), moving//2)
     if moving:
-        player_x += (moving - moving//2) * player_speed
-        player_y += moving//2 * player_speed
+        if -2 < moving < 2:
+            player_x += moving * player_speed
+        else:
+            player_y += moving//2 * player_speed
     
     screen.fill(WHITE)
     draw_screen()
