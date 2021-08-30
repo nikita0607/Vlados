@@ -12,14 +12,24 @@ RED = (255,0,0)
 BLUE = (0,0,255)
 ORANGE = (255, 150, 100)
 
+# Персонаж
+player_speed = 1
+
+
 pygame.init()
 clock = pygame.time.Clock()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
 screen.fill(WHITE)
+
+
+def draw_screen():
+    pygame.display.update()
+
 running = True
 while running:
     moving = ""
+
     events = pygame.event.get()
     for i in events:
         if i.type == pygame.QUIT:
@@ -32,10 +42,9 @@ while running:
             if i.key == pygame.K_UP:
                 moving = 'UP'
             if i.key == pygame.K_DOWN:
-                moving = 'DOWN'    
-        
+                moving = 'DOWN'
     
-    pygame.display.update()
+    draw_screen()
     clock.tick(FPS)
 pygame.quit()
 
