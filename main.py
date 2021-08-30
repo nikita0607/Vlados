@@ -67,20 +67,20 @@ while running:
             running = False
 
     keys = pygame.key.get_pressed()
-    if keys[pygame.A]:
+    if keys[pygame.a]:
         player_x -= player_speed
         player_x_moving = 10
-    elif keys[pygame.D]:
+    elif keys[pygame.d]:
         player_x += player_speed
         player_x_moving = -10
     else:
         player_x_moving = 0
         moving_x = False
 
-    if keys[pygame.W]:
+    if keys[pygame.w]:
         player_y -= player_speed
         player_y_moving = -10
-    elif keys[pygame.S]:
+    elif keys[pygame.s]:
         player_y += player_spee
         player_y_moving = 10
     else:
