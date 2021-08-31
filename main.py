@@ -21,7 +21,7 @@ MAX_DISTANCE_TO_OBJECT = 15  # Макс. дист. до объекта
 score = 0  # Сколько печенек было съедено
 
 player_speed = 1  # Скорость игрока
-heroImg = pygame.image.load('models/chief.png')  # Текстура игрока
+heroImg = pygame.image.load('chief.png')  # Текстура игрока
 player_x = WIDTH // 2
 player_y = HEIGHT // 2
 
@@ -40,10 +40,10 @@ def player_hand_y():  # Координата руки по Y
 
 # Игровые обекты
 game_objects = [{"name": "cockie", "type": "draggable", "x": 400, "y": 240,
-                 "width": 8, "height": 5, "model": pygame.image.load("models/cockie.png")},
+                 "width": 8, "height": 5, "model": pygame.image.load("cockie.png")},
                 
                 {"name": "fatman", "type": "usable", "x": 600, "y": 250,
-                 "width": 39, "height": 30, "model": pygame.image.load("models/fatman.png")}]
+                 "width": 39, "height": 30, "model": pygame.image.load("fatman.png")}]
 
 clock = pygame.time.Clock()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
