@@ -2,6 +2,9 @@ import pygame
 import random
 from math import sqrt
 
+
+pygame.init()
+
 FPS = 60
 WIDTH = 1000
 HEIGHT = 500
@@ -42,7 +45,6 @@ game_objects = [{"name": "cockie", "type": "draggable", "x": 400, "y": 240,
                 {"name": "fatman", "type": "usable", "x": 600, "y": 250,
                  "width": 39, "height": 30, "model": pygame.image.load("models/fatman.png")}]
 
-pygame.init()
 clock = pygame.time.Clock()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
