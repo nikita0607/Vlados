@@ -88,7 +88,7 @@ def interact_with_item(obj):  # Когда игрок нажал клавишу 
                 score += 1
                 game_objects.remove(player_hand)  # Удаляем печеньку в руках из объектов
                 player_hand = None  # Очищаем руку
-                print(f"Score = {score}")
+                print("Score = ", score)
             else:
                 print("GIVE ME A COCKIE!!!")
             return
